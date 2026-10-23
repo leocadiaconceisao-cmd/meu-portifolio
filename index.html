@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Leocádia da Conceição</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b1720;
+            color: white;
+            line-height: 1.7;
+        }
+        /* Cabeçalho */
+        header {
+            background-color: #122430;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        header h2 {
+            color: #66e6b2;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        nav a:hover {
+            color: #66e6b2;
+        }
+        /* Apresentação */
+        .inicio {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 70px 8%;
+        }
+        .texto {
+            flex: 1;
+        }
+        .texto h1 {
+            font-size: 38px;
+            line-height: 1.3;
+            margin: 15px 0;
+        }
+        .destaque {
+            color: #66e6b2;
+        }
+        .texto p {
+            color: #c3d0d8;
+            margin-bottom: 25px;
+        }
+        .botao {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #66e6b2;
+            color: #0b1720;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .botao:hover {
+            background-color: white;
+        }
+        /* Fotografia */
+        .foto {
+            flex: 0 0 260px;
+            text-align: center;
+        }
+        .foto img {
+            width: 250px;
+            height: 290px;
+            object-fit: cover;
+            border: 3px solid #66e6b2;
+            border-radius: 20px;
+            background-color: #122430;
+        }
+        .foto p {
+            color: #66e6b2;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        /* Secções */
+        section:not(.inicio) {
+            padding: 60px 8%;
+        }
+        section h2 {
+            margin-bottom: 20px;
+        }
+        .sobre {
+            background-color: #122430;
+        }
+        .sobre p {
+            color: #c3d0d8;
+            margin-bottom: 12px;
+        }
+        .subtitulo {
+            color: #66e6b2;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+        /* Cartões de competências */
+        .cartoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .cartao {
+            background-color: #122430;
+            border: 1px solid #29414d;
+            padding: 25px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 200px;
+            transition: 0.3s;
+        }
+        .cartao:hover {
+            transform: translateY(-5px);
+            border-color: #66e6b2;
+        }
+        .cartao h3 {
+            color: #66e6b2;
+            margin-bottom: 12px;
+        }
+        .cartao p {
+            color: #c3d0d8;
+        }
+        .icone {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        /* Objectivos */
+        .objectivos {
+            background-color: #102d2c;
+            text-align: center;
+        }
+        .objectivos p {
+            color: #c3d0d8;
+            max-width: 700px;
+            margin: auto;
+        }
+        /* Contactos */
+        .contactos {
+            text-align: center;
+        }
+        .contactos p {
+            color: #c3d0d8;
+            margin-bottom: 20px;
+        }
+        /* Rodapé */
+        footer {
+            background-color: #122430;
+            text-align: center;
+            padding: 20px;
+            color: #c3d0d8;
+        }
+        /* Telemóveis */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+            }
+            nav {
+                text-align: center;
+            }
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+            .inicio {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .texto h1 {
+                font-size: 30px;
+            }
+            .foto {
+                flex-basis: auto;
+            }
+            .foto img {
+                width: 220px;
+                height: 260px;
+            }
+            .cartoes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Leocádia da Conceição</h2>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#competencias">Competências</a>
+            <a href="#contactos">Contactos</a>
+        </nav>
+    </header>
+    <main>
+        <section class="inicio" id="inicio">
+            <div class="texto">
+                <p class="subtitulo">BEM-VINDO(A) AO MEU ESPAÇO</p>
+                <h1>
+                    Conhecimento, criatividade e <span class="destaque">vontade de crescer.</span>
+                </h1>
+                <p>
+                    Sou a Leocádia, uma pessoa dedicada à aprendizagem, com formação em Electricidade Instaladora Básica e Informática Básica. Tenho também interesse pelo xadrez, que estimula o meu pensamento estratégico e a concentração.
+                </p>
+                <a href="#competencias" class="botao"> Conhecer competências </a>
+            </div>
+            <div class="foto">
+                <!-- Lembra-te de mudar o nome desta imagem para "minha-foto.jpg" na tua pasta -->
+                <img src="ChatGPT_Image_23_10_2026,_15_13_10.png" alt="Fotografia de Leocádia da Conceição">
+                <p>A aprender hoje, a construir o amanhã.</p>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <p class="subtitulo">UM POUCO SOBRE MIM</p>
+            <h2>Aprender é construir possibilidades.</h2>
+            <p>
+                Acredito que cada conhecimento adquirido representa uma oportunidade de crescimento. O meu percurso combina conhecimentos técnicos, competências digitais e pensamento estratégico.
+            </p>
+            <p>
+                Procuro evoluir continuamente, transformar o que aprendo em prática e desenvolver capacidades que me permitam contribuir positivamente para a sociedade.
+            </p>
+        </section>
+
+        <section id="competencias">
+            <p class="subtitulo">O QUE APRENDI</p>
+            <h2>As minhas competências</h2>
+            <div class="cartoes">
+                <div class="cartao">
+                    <div class="icone">⚡</div>
+                    <h3>Electricidade Instaladora Básica</h3>
+                    <p>
+                        Formação básica na área eléctrica, com conhecimentos introdutórios sobre instalações, circuitos e segurança.
+                    </p>
+                </div>
+                <div class="cartao">
+                    <div class="icone">💻</div>
+                    <h3>Informática Básica</h3>
+                    <p>
+                        Conhecimentos fundamentais de informática, utilização do computador e contacto com ferramentas digitais.
+                    </p>
+                </div>
+                <div class="cartao">
+                    <div class="icone">♟</div>
+                    <h3>Xadrez</h3>
+                    <p>
+                        Um interesse que desenvolve a minha concentração, paciência, capacidade de análise e pensamento estratégico.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="objectivos">
+            <h2>O futuro começa com aprendizagem.</h2>
+            <p>
+                O meu objectivo é continuar a adquirir conhecimentos, aperfeiçoar as minhas competências e descobrir novas oportunidades de crescimento pessoal e profissional.
+            </p>
+        </section>
+
+        <section class="contactos" id="contactos">
+            <p class="subtitulo">VAMOS CONVERSAR</p>
+            <h2>Contactos</h2>
+            <p>
+                Estou aberta a novas oportunidades, partilha de conhecimentos e aprendizagem.
+            </p>
+            <!-- Substitui o "teuemail@exemplo.com" pelo teu e-mail real -->
+            <a href="mailto:teuemail@exemplo.com" class="botao"> Enviar e-mail </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 · Leocádia da Conceição · Aprender, evoluir e realizar.</p>
+    </footer>
+</body>
+</html>
+
